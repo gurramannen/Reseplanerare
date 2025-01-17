@@ -1,0 +1,13 @@
+.activity-form {
+    max-width: 400px;
+    margin: auto;
+  }
+  
+  .activity-form div {
+    margin-bottom: 1rem;
+  }
+  
+  .activity-form .error {
+    color: red;
+    font-weight: bold;
+  }
