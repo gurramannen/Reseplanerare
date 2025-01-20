@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types"; // Rätt import
 import "../styles/ActivityForm.css";
 
+// input för namn datum plats med usestate
 const ActivityForm = ({ onAddActivity }) => {
   const [name, setName] = useState("");
   const [date, setDate] = useState("");
   const [location, setLocation] = useState("");
   const [error, setError] = useState("");
 
+//felhantering för felaktiga inmatningar
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!name || !date || !location) {

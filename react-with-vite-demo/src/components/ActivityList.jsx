@@ -1,7 +1,7 @@
-import React from "react";
 import PropTypes from "prop-types";
 import "../styles/ActivityList.css";
 
+//returenerar en lista med aktiviteter, i en array
 const ActivityList = ({ activities }) => {
   return (
     <div className="activity-list">
@@ -19,6 +19,17 @@ const ActivityList = ({ activities }) => {
       )}
     </div>
   );
+};
+
+//validerar att activities är en array med objekt som har name, date och location
+ActivityList.propTypes = {
+  activities: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      location: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default ActivityList;
